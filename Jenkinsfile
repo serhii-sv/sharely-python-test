@@ -14,6 +14,8 @@ pipeline {
                 script {
                     // Install any dependencies if necessary
                     sh '''
+                    sudo apt update
+                    sudo apt install python3.10-venv -y
                     if [ ! -d "venv" ]; then
                         python3 -m venv venv
                     fi
