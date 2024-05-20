@@ -16,8 +16,7 @@ pipeline {
                     sh '''
                     if [ ! -d "venv" ]; then
                         python3 -m venv venv
-                        source venv/bin/activate
-                        pip install -r requirements.txt  # Install Python dependencies
+                        ./venv/bin/pip install -r requirements.txt  # Install Python dependencies directly
                     fi
                     '''
                 }
@@ -29,8 +28,7 @@ pipeline {
                 script {
                     // Run the Python script
                     sh '''
-                    source venv/bin/activate
-                    python main.py --param1 value1 --param2 value2
+                    ./venv/bin/python main.py --param1 value1 --param2 value2
                     '''
                 }
             }
