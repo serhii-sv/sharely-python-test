@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout the repository containing the Python script
-                git url: ''https://github.com/serhii-sv/sharely-python-test.git, branch: 'master'
+                git url: 'https://github.com/serhii-sv/sharely-python-test.git', branch: 'master'
             }
         }
 
